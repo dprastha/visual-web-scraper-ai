@@ -27,8 +27,9 @@ This repo has been refactored into a single fullstack Next.js + TypeScript appli
 
 ## Notes
 
-- The strategy layer calls an OpenAI-compatible endpoint at `OPENAI_COMPATIBLE_BASE_URL` and defaults to `http://127.0.0.1:1234/v1`.
-- The strategy model is fixed to `mistralai/ministral-3-3b`.
+- The strategy layer reads its OpenAI-compatible settings from `.env`.
+- `OPENAI_COMPATIBLE_BASE_URL` defaults to `http://127.0.0.1:1234`.
+- `STRATEGY_MODEL` is set to `mistralai/ministral-3-3b` in the included env files.
 - Set `OPENAI_COMPATIBLE_API_KEY` if your endpoint requires bearer auth.
 - The LLM never writes executable scraper code directly. It returns structured JSON that is validated before the backend generates the final Puppeteer script from templates.
 - The previous `backend/` and `frontend/` folders are still present in the repo as legacy references and can be removed once you no longer need them.

@@ -61,7 +61,7 @@ const validateStrategySchema = ajv.compile<ScrapingStrategy>(strategySchema);
 
 const OPENAI_COMPATIBLE_BASE_URL = process.env.OPENAI_COMPATIBLE_BASE_URL ?? 'http://127.0.0.1:1234';
 const OPENAI_COMPATIBLE_API_KEY = process.env.OPENAI_COMPATIBLE_API_KEY;
-const STRATEGY_MODEL = 'mistralai/ministral-3-3b';
+const STRATEGY_MODEL = process.env.STRATEGY_MODEL ?? 'mistralai/ministral-3-3b';
 
 function cleanJsonResponse(rawContent: string) {
 	return rawContent
