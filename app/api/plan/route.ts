@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 
-import { generatePuppeteerScriptFromSelection } from "@/lib/server/script";
+import { buildStrategyAndScript } from "@/lib/server/script";
 import type { ScriptRequestBody } from "@/lib/types";
 
 export const runtime = "nodejs";
@@ -17,12 +17,12 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    const script = generatePuppeteerScriptFromSelection({
+    const result = await buildStrategyAndScript({
       url: body.url,
-      element: body.clickedElement,
+      clickedElement: body.clickedElement,
     });
 
-    return NextResponse.json({ script });
+    return NextResponse.json(result);
   } catch (error) {
     return NextResponse.json(
       { message: error instanceof Error ? error.message : "Script generation failed" },
