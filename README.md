@@ -2,6 +2,8 @@
 
 This repo has been refactored into a single fullstack Next.js + TypeScript application.
 
+<img src="screenshot/the-app.png" width="80%">
+
 ## Stack
 
 - Next.js App Router
