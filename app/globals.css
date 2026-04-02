@@ -1,0 +1,49 @@
+:root {
+  --bg: #f6f2ea;
+  --bg-strong: #efe5d4;
+  --surface: rgba(255, 252, 247, 0.9);
+  --surface-strong: rgba(255, 248, 238, 0.96);
+  --ink: #1f1f1a;
+  --muted: #6c6255;
+  --line: rgba(73, 52, 28, 0.15);
+  --accent: #bc5b2c;
+  --accent-strong: #90401b;
+  --accent-soft: rgba(188, 91, 44, 0.12);
+  --success: #16624f;
+  --danger: #b22727;
+  --shadow: 0 24px 60px rgba(73, 52, 28, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at top left, rgba(223, 162, 95, 0.26), transparent 34%),
+    radial-gradient(circle at top right, rgba(30, 95, 84, 0.18), transparent 28%),
+    linear-gradient(180deg, #fcfaf5 0%, var(--bg) 48%, #efe6d9 100%);
+  font-family: "Avenir Next", "Segoe UI", sans-serif;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+a {
+  color: inherit;
+}
+
+pre,
+code {
+  font-family: "SFMono-Regular", "Menlo", "Monaco", monospace;
+}
