@@ -1,6 +1,6 @@
-# AI HTML Extractor
+# Visual Web Scraper Workbench
 
-This repo has been refactored into a single fullstack Next.js + TypeScript application.
+Visual web scraping workbench that turns browser element selection into validated LLM strategies and deterministic Puppeteer scripts.
 
 <img src="screenshot/the-app.png" width="80%">
 
